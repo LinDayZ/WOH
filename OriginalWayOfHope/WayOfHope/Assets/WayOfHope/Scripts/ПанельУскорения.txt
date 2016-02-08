@@ -1,0 +1,23 @@
+using UnityEngine;
+using System.Collections;
+
+public class xp : MonoBehaviour
+{
+
+    private float hScrollbarValue, x = 0;
+    void OnGUI()
+    {
+        hScrollbarValue = GUI.HorizontalScrollbar(new Rect(25, 25, 250, 30), hScrollbarValue, x, 0.0f, 400.0f);
+        if (Input.GetKey(KeyCode.LeftShift) && x<=400)
+        {
+            x = x + 1f;
+        }
+        if (!(Input.GetKey(KeyCode.LeftShift)))
+        {
+            if (x != 0)
+            {
+                x = x - 0.5f;
+            }
+        }
+    }
+}
