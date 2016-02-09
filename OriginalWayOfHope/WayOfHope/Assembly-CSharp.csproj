@@ -47,7 +47,10 @@
   <ItemGroup>
      <Compile Include="Assets\WayOfHope\Scripts\PlayerCam.cs" />
      <Compile Include="Assets\WayOfHope\Scripts\motion.cs" />
+     <None Include="Assets\WayOfHope\Mod\Tiny\readme.txt" />
      <None Include="Assets\WayOfHope\Scripts\ПанельУскорения.txt" />
+     <None Include="Assets\WayOfHope\Mod\Scre\Documentation\Screaming Tree&apos;s-Readme\Screaming Tree&apos;s readme.txt" />
+     <None Include="Assets\WayOfHope\Mod\Scre\Documentation\Screaming Tree&apos;s-Readme\Renderosity License.txt" />
      <None Include="Assets\WayOfHope\Scripts\Фонарь.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
