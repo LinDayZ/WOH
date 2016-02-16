@@ -45,7 +45,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\WayOfHope\Scripts\EnemyHealth.cs" />
      <Compile Include="Assets\WayOfHope\Scripts\PlayerCam.cs" />
+     <Compile Include="Assets\WayOfHope\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\WayOfHope\Scripts\motion.cs" />
      <None Include="Assets\WayOfHope\Mod\Tiny\readme.txt" />
      <None Include="Assets\WayOfHope\Scripts\ПанельУскорения.txt" />
