@@ -54,6 +54,7 @@
      <Compile Include="Assets\WayOfHope\Materials\Water\Water\Scripts\WaterBase.cs" />
      <Compile Include="Assets\WayOfHope\Materials\Water\Water\Scripts\WaterTile.cs" />
      <Compile Include="Assets\WayOfHope\Scripts\EnemyHealth.cs" />
+     <Compile Include="Assets\WayOfHope\Scripts\Lamp.cs" />
      <Compile Include="Assets\WayOfHope\Scripts\PlayerCam.cs" />
      <Compile Include="Assets\WayOfHope\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\WayOfHope\Scripts\motion.cs" />
