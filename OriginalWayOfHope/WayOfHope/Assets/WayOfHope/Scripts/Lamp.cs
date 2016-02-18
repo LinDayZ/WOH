@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Lamp: MonoBehaviour {
-
+	private int i;
 	// Use this for initialization
 	void Start () {
 	
@@ -10,7 +10,7 @@ public class Lamp: MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Mouse0)) {
+		if (Input.GetKeyUp (KeyCode.Mouse0)) {
 			GetComponent<Light> ().enabled = !GetComponent<Light> ().enabled;
 		}
 	}

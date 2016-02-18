@@ -28,7 +28,7 @@ public class EnemyHealth : MonoBehaviour {
 	}
 	//произвольные рассчеты размера бара и здоровья..
 	public void AddjustCurrentHealth(int adj){
-		_curHealth = adj;
+		_curHealth += adj;
 		//Блок по предотвращению получения неверного состояния здоровья
 		//меньше нуля и больше максимума
 		//так как изменяем здоровье из вне

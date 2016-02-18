@@ -19,7 +19,7 @@ public class PlayerHealth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		AddjustCurrentHealth (_curHealth);
 	}
 	//функция графического интерфейса
 	void OnGUI()
@@ -29,7 +29,9 @@ public class PlayerHealth : MonoBehaviour {
 	}
 	//произвольные рассчеты размера бара и здоровья..
 	public void AddjustCurrentHealth(int adj){
-		_curHealth = adj;
+		//adj-это изменение состояние здоровья а не его значение
+		//_curHealth = adj; - старое значение
+		_curHealth += adj;//новое значение 
 		//Блок по предотвращению получения неверного состояния здоровья
 		//меньше нуля и больше максимума
 		//так как изменяем здоровье из вне

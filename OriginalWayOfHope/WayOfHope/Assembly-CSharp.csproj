@@ -53,8 +53,10 @@
      <Compile Include="Assets\WayOfHope\Materials\Water\Water\Scripts\Water.cs" />
      <Compile Include="Assets\WayOfHope\Materials\Water\Water\Scripts\WaterBase.cs" />
      <Compile Include="Assets\WayOfHope\Materials\Water\Water\Scripts\WaterTile.cs" />
+     <Compile Include="Assets\WayOfHope\Scripts\EnemyAI.cs" />
      <Compile Include="Assets\WayOfHope\Scripts\EnemyHealth.cs" />
      <Compile Include="Assets\WayOfHope\Scripts\Lamp.cs" />
+     <Compile Include="Assets\WayOfHope\Scripts\PlayAttack.cs" />
      <Compile Include="Assets\WayOfHope\Scripts\PlayerCam.cs" />
      <Compile Include="Assets\WayOfHope\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\WayOfHope\Scripts\motion.cs" />
@@ -63,7 +65,6 @@
      <None Include="Assets\WayOfHope\Materials\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\WayOfHope\Mod\Scre\Documentation\Screaming Tree&apos;s-Readme\Screaming Tree&apos;s readme.txt" />
      <None Include="Assets\WayOfHope\Mod\Scre\Documentation\Screaming Tree&apos;s-Readme\Renderosity License.txt" />
-     <None Include="Assets\WayOfHope\Scripts\Фонарь.txt" />
      <None Include="Assets\WayOfHope\Materials\Water\Water\Shaders\FXWaterPro.shader" />
      <None Include="Assets\WayOfHope\Materials\Water\Water4\Shaders\WaterInclude.cginc" />
      <None Include="Assets\WayOfHope\Materials\Water\Water4\Shaders\FXWater4Advanced.shader" />
