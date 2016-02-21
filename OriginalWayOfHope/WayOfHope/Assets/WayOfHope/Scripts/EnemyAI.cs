@@ -8,6 +8,7 @@ public class EnemyAI : MonoBehaviour {
 	public Transform target;//Цель
 	public int moveSpeed;// скрость перемещения
 	public int rotationSpeed;//скорость поворота
+	public int maxDistance;//максимальное приближение к игроку
 	public Transform myTransform;//временная переменная для хранения ссылки на свойство transform (это оптимизации)
 
 	void Awake(){
@@ -20,14 +21,17 @@ public class EnemyAI : MonoBehaviour {
 		GameObject go=GameObject.FindGameObjectWithTag("Player");
 		//и ставим на него прицел (делаем нашей целью)
 		target=go.transform;
+		maxDistance = 1;//установка максимальной дистанци
 	}
-
 	// Update is called once per frame
 	void Update () {
 		//чертим линию  от нас к игроку (видно только в редакторе)
+		//(видима в редактора только)
 		Debug.DrawLine(target.position,myTransform.position,Color.yellow);
 		//поварачиваемся в сторону игрока(цели)
 		myTransform.rotation=Quaternion.Slerp(myTransform.rotation,Quaternion.LookRotation(target.position-myTransform.position),rotationSpeed * Time.deltaTime);
-		myTransform.position += myTransform.forward * moveSpeed * Time.deltaTime;
+		if (Vector3.Distance (target.position, myTransform.position) >= maxDistance) {
+			myTransform.position += myTransform.forward * moveSpeed * Time.deltaTime;
+		}
 	}
 }

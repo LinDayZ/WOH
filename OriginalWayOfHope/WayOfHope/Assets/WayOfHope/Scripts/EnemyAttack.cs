@@ -1,45 +1,34 @@
-﻿//Атака игрока с нанесние урона Enemy
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
-public class PlayAttack : MonoBehaviour {
-	//Определение публичных переменных
-	public GameObject target;//цель игрока
+public class EnemyAttack: MonoBehaviour {
+	//определение публичной переменных
+	public GameObject target;//цель Enemy
 	public float coolDown;//время между атаками
-	public float attackTimer;//время проведения атаки 
-							//public временно для теста
-	// Use this for initialization
+	public float attackTimer;//время проведения атаки
+							 //згидшс временно для теста
 	void Start () {
-		//устанавливаем начальное значение 
-		attackTimer = 0;
-		if (coolDown == 0) {
-			coolDown = 2.0f;
-		}
-	
+		//устанавливаем начальное значение
+		attackTimer=0;
+		coolDown = 2.0f;
 	}
-	//цикл на каждый кадр
-	
-	// Update is called once per frame
+
 	void Update () {
+		Attack();
 		//выдерживаем паузу
 		if (attackTimer > 0)
 			attackTimer -= Time.deltaTime;
 		//пауза закончена, на всякий случай обнуляем результат
 		if (attackTimer < 0)
 			attackTimer = 0;
-		//По нажатию на клавишу Fy на клавиатуре происходит Enemy
-		if (Input.GetKeyUp (KeyCode.F)) {
+		
 			//если пауза выдержана, но наносим очередной удар
 			if (attackTimer == 0) {
 				Attack();
 				//устанавливаем размер между ударами
 				attackTimer=coolDown;
 			}
-		}
-	//по нажатию клавиши F на клавиатуре происходит атака по Enemy
-		if(Input.GetKeyUp(KeyCode.F)){
-			Attack ();
-		}
+			
 	}
 	//атака Enemy
 	private void Attack(){
@@ -54,10 +43,10 @@ public class PlayAttack : MonoBehaviour {
 		//усли дистанция меньше максимальной, то можем нанести урон
 		if (distance < 2 && direction > 0) {
 			//У цели Enemy ищим компонет с именем EnemyHealth - скрипт
-			EnemyHealth eh = (EnemyHealth)target.GetComponent ("EnemyHealth");
+			PlayerHealth ah = (PlayerHealth)target.GetComponent ("PlayerHealth");
 			//и используем его метод изменения состояния здоровья 
 			//(необходимо переписать AddjustCurrentHeath с учетом новых требований)
-			eh.AddjustCurrentHealth (-10);
+			ah.AddjustCurrentHealth(-10);
 		}
 	}
 }

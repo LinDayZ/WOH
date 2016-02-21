@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemyHealth : MonoBehaviour {
 	//публичные переменные для настроек
-	public int maxHealth=100;
+	public int maxHealth=150;
 	//Приватные переменные для настроек
 	private int _curHealth=100;
 	private float healthBarLength;
